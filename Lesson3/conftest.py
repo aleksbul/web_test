@@ -10,7 +10,7 @@ with open('./testdata.yaml') as f:
     testdata = yaml.safe_load(f)
     browser = testdata["browser"]
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="function")
 def browser():
     if browser == "firefox":
         service = Service(executable_path=GeckoDriverManager().install())
@@ -22,3 +22,8 @@ def browser():
         driver = webdriver.Chrome(service=service, options=options)
     yield driver
     driver.quit()
+
+
+# @pytest.fixture
+# def logout():
+#     yield

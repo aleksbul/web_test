@@ -17,6 +17,8 @@ class TestSearchLocators:
     LOCATOR_SAVE_POST_BTN = (By.XPATH, '//*[@id="create-item"]/div/div/div[7]/div/button/span')
     LOCATOR_POST_IMAGE = (By.TAG_NAME, 'img')
     LOCATOR_POST_TITLE = (By.XPATH, '//*[@id="app"]/main/div/div[1]/h1')
+    LOCATOR_MENU = (By.XPATH, '//*[@id="app"]/main/nav/ul/li[3]/a')
+    LOCATOR_LOGOUT_BTN = (By.XPATH, '//*[@id="app"]/main/nav/ul/li[3]/div/ul/li[3]/span[1]')
 
 
 
