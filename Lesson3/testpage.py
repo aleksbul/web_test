@@ -19,7 +19,14 @@ class TestSearchLocators:
     LOCATOR_POST_TITLE = (By.XPATH, '//*[@id="app"]/main/div/div[1]/h1')
     LOCATOR_MENU = (By.XPATH, '//*[@id="app"]/main/nav/ul/li[3]/a')
     LOCATOR_LOGOUT_BTN = (By.XPATH, '//*[@id="app"]/main/nav/ul/li[3]/div/ul/li[3]/span[1]')
+    LOCATOR_CONTACT_BTN = (By.XPATH, '//*[@id="app"]/main/nav/ul/li[2]/a')
 
+
+class ContactPageLocators:
+    LOCATOR_CONTACT_NAME_INPUT = (By.XPATH, '//*[@id="contact"]/div[1]/label/input')
+    LOCATOR_CONTACT_EMAIL_INPUT = (By.XPATH, '//*[@id="contact"]/div[2]/label/input')
+    LOCATOR_CONTACT_CONTENT_INPUT = (By.XPATH, '//*[@id="contact"]/div[3]/label/span/textarea')
+    LOCATOR_CONTACT_SUBMIT_BTN = (By.XPATH, '//*[@id="contact"]/div[4]/button/span')
 
 
 class OperationsHelper(BasePage):
@@ -38,6 +45,12 @@ class OperationsHelper(BasePage):
     def click_login_button(self):
         logging.info("Click login button")
         self.find_element(TestSearchLocators.LOCATOR_LOGIN_BTN).click()
+
+
+    def login(self, login, passwd):
+        self.enter_login(login)
+        self.enter_pass(passwd)
+        self.click_login_button()
 
     def get_error_text(self):
         error_field = self.find_element(TestSearchLocators.LOCATOR_ERROR_FIELD, time=3)
@@ -62,3 +75,20 @@ class OperationsHelper(BasePage):
 
     def save_post(self):
         self.find_element(TestSearchLocators.LOCATOR_SAVE_POST_BTN).click()
+
+    def contact_btn(self):
+        self.find_element(TestSearchLocators.LOCATOR_CONTACT_BTN).click()
+
+
+class ContactPage(BasePage):
+    def input_name(self, name):
+        self.find_element(ContactPageLocators.LOCATOR_CONTACT_NAME_INPUT).send_keys(name)
+
+    def input_email(self, email):
+        self.find_element(ContactPageLocators.LOCATOR_CONTACT_EMAIL_INPUT).send_keys(email)
+
+    def input_content(self, content):
+        self.find_element(ContactPageLocators.LOCATOR_CONTACT_CONTENT_INPUT).send_keys(content)
+
+    def submit_form(self):
+        self.find_element(ContactPageLocators.LOCATOR_CONTACT_SUBMIT_BTN).click()

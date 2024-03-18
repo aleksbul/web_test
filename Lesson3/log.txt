@@ -1,26 +1,7 @@
-19:17:26 INFO + ====== WebDriver manager ======
-19:17:27 INFO + Get LATEST chromedriver version for google-chrome
-19:17:27 INFO + Get LATEST chromedriver version for google-chrome
-19:17:27 INFO + Driver [C:\Users\alexa\.wdm\drivers\chromedriver\win64\122.0.6261.128\chromedriver-win32/chromedriver.exe] found in cache
-19:17:28 INFO + Test1 Starting
-19:17:30 INFO + Send test to element //*[@id="login"]/div[1]/label/input
-19:17:30 INFO + Send test to element //*[@id="login"]/div[2]/label/input
-19:17:30 INFO + Click login button
-19:17:31 INFO + We found text 401 in error field //*[@id="app"]/main/div/div/div[2]/h2
-19:17:38 INFO + ====== WebDriver manager ======
-19:17:39 INFO + Get LATEST chromedriver version for google-chrome
-19:17:39 INFO + Get LATEST chromedriver version for google-chrome
-19:17:39 INFO + Driver [C:\Users\alexa\.wdm\drivers\chromedriver\win64\122.0.6261.128\chromedriver-win32/chromedriver.exe] found in cache
-19:17:40 INFO + Test2 Starting
-19:17:42 INFO + Send Fred123 to element //*[@id="login"]/div[1]/label/input
-19:17:42 INFO + Send 17fe38c02d to element //*[@id="login"]/div[2]/label/input
-19:17:42 INFO + Click login button
-19:17:50 INFO + ====== WebDriver manager ======
-19:17:51 INFO + Get LATEST chromedriver version for google-chrome
-19:17:51 INFO + Get LATEST chromedriver version for google-chrome
-19:17:52 INFO + Driver [C:\Users\alexa\.wdm\drivers\chromedriver\win64\122.0.6261.128\chromedriver-win32/chromedriver.exe] found in cache
-19:17:53 INFO + Test3 Starting
-19:17:55 INFO + Send Fred123 to element //*[@id="login"]/div[1]/label/input
-19:17:55 INFO + Send 17fe38c02d to element //*[@id="login"]/div[2]/label/input
-19:17:55 INFO + Click login button
-19:17:58 INFO + We found text Test title on the page of the post
+14:18:05 INFO + ====== WebDriver manager ======
+14:18:06 INFO + Get LATEST chromedriver version for google-chrome
+14:18:06 INFO + Get LATEST chromedriver version for google-chrome
+14:18:06 INFO + Driver [C:\Users\alexa\.wdm\drivers\chromedriver\win64\122.0.6261.128\chromedriver-win32/chromedriver.exe] found in cache
+14:18:09 INFO + Send Fred123 to element //*[@id="login"]/div[1]/label/input
+14:18:09 INFO + Send 17fe38c02d to element //*[@id="login"]/div[2]/label/input
+14:18:09 INFO + Click login button

@@ -1,4 +1,6 @@
-from testpage import OperationsHelper
+import time
+
+from testpage import OperationsHelper, ContactPage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -55,3 +57,18 @@ def test_user_can_create_post(browser):
     post_title = testpage.find_element(TestSearchLocators.LOCATOR_POST_TITLE).text
     logging.info(f"We found text {post_title} on the page of the post")
     assert post_title == testdata['title']
+
+
+def test_check_contact_us(browser):
+    login_page = OperationsHelper(browser)
+    login_page.go_to_site()
+    login_page.login(testdata['email'], testdata['password'])
+    login_page.contact_btn()
+    contact_page = ContactPage(browser, browser.current_url)
+    contact_page.input_name(testdata['contact_name'])
+    contact_page.input_email(testdata['contact_email'])
+    contact_page.input_content(testdata['contact_content'])
+    contact_page.submit_form()
+    time.sleep(2)
+    text = contact_page.get_text_from_alert()
+    assert text == 'Form successfully submitted'
