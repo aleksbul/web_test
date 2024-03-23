@@ -1,0 +1,23 @@
+website1: https://test-stand.gb.ru/gateway/login
+website_get_posts: https://test-stand.gb.ru/api/posts
+website_create_post: https://test-stand.gb.ru/gateway/posts
+username: Fred123
+password: 17fe38c02d
+title_test_rest: 2 Freddie Mercury on his Opera Rock duet with Montserrat
+title_create_rest: New post python
+description_create_rest: new post
+content_create_rest: content
+address: http://test-stand.gb.ru
+sleep_time: 1
+browser: chrome
+implicitly_wait: 5
+email: Fred123
+title: Test title
+description: Test description
+content: Test content
+contact_name: Test Name
+contact_email: Test@gamil.com
+contact_content: Test Content
+from_email: motia10@mail.ru
+to_email: motia10@mail.ru
+pass_email: zfiCDYDRaxJSnrYzGiy0
